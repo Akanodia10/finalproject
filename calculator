@@ -1,0 +1,134 @@
+#include <stdio.h>
+#include <math.h>
+
+float add();
+float subtract();
+float multiply();
+float divide();
+float sine();
+float cosine();
+float tangent();
+
+int main()
+{
+    char op;
+    float num1, num2, result=0.0f;
+
+    printf("WELCOME TO THE CALCULATOR\n");
+    printf("Input + symbol for addition\n");
+    printf("Input - symbol for subtraction\n");
+    printf("Input * symbol for multiplication\n");
+    printf("Input / symbol for division\n");
+    printf("Input < symbol for sin\n");
+    printf("Input > symbol for cos\n");
+    printf("Input ? symbol for tan\n");
+
+    scanf("%c", &op);
+
+    switch(op)
+    {
+        case '+': 
+            add();
+            break;
+
+        case '-': 
+            subtract();
+            break;
+
+        case '*': 
+            multiply();
+            break;
+
+        case '/': 
+            divide();
+            break;
+
+        case '<':
+            sine();
+            break;
+
+        case '>':
+            cosine();
+            break;
+
+        case '?':
+            tangent();
+            break;
+
+    }
+}
+
+float add()
+{
+    float a, b, c =0;
+    printf("Enter the first number you'd like to add:\n");
+    scanf("%f", &a);
+    printf("Enter the second number you'd like to add:\n");
+    scanf("%f", &b);
+    c=a+b;
+    printf("%f + %f= %f\n", a, b, c);
+    return(0);
+}
+float subtract()
+{
+    float a, b, c =0;
+    printf("Enter the first number you'd like to subtract from:\n");
+    scanf("%f", &a);
+    printf("Enter the second number you'd like to subtract:\n");
+    scanf("%f", &b);
+    c=a-b;
+    printf("%f + %f= %f\n", a, b, c);
+    return(0);
+}
+float multiply()
+{
+    float a, b, c =0;
+    printf("Enter the first number you'd like to multiply:\n");
+    scanf("%f", &a);
+    printf("Enter the second number you'd like to multiply:\n");
+    scanf("%f", &b);
+    c=a*b;
+    printf("%f + %f= %f\n", a, b, c);
+    return(0);
+}
+float divide()
+{
+    float a, b, c =0;
+    printf("Enter the dividend:\n");
+    scanf("%f", &a);
+    printf("Enter the divisor:\n");
+    scanf("%f", &b);
+    c=a/b;
+    printf("%f + %f= %f\n", a, b, c);
+    return(0);
+}
+float sine()
+{
+    float x=0;
+    float y= 0;
+    printf("Enter the number you'd like to take sin() of in radians:\n");
+    scanf("%f", &x);
+    y=sin(x);
+    printf("sin(%f)= %f\n", x, y);
+    return(0);
+}
+float cosine()
+{
+    float x=0;
+    float y= 0;
+    printf("Enter the number you'd like to take cos() of in radians:\n");
+    scanf("%f", &x);
+    y=cos(x);
+    printf("cos(%lf)= %lf\n", x, y);
+    return(0);
+}
+float tangent()
+{
+    float x=0;
+    float y= 0;
+    printf("Enter the number you'd like to take tan() of in radians:\n");
+    scanf("%f", &x);
+    y=tan(x);
+    printf("tan(%lf)= %lf\n", x, y);
+    return(0);
+}
